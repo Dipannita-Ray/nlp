@@ -74,14 +74,14 @@ in neuropsychology ,linguistics and the philosophy of language ,a natural or ord
   3. remove url
   4. remove punctuation
   5. chat word treatment: make a dictionary of the chat words and then write a function
-      `def chat_conversion(text)
+      ``` def chat_conversion(text)
            new_text = []
            for w in text.split():
                if w.upper() in chat_words:
                    new_text.append(chat_words[w.upper()])
                else:
                     new_text.append(w)
-              return " ".join(new_text)`
+              return " ".join(new_text)```
         
         
   
