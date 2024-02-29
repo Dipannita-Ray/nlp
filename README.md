@@ -81,7 +81,17 @@ in neuropsychology ,linguistics and the philosophy of language ,a natural or ord
                    new_text.append(chat_words[w.upper()])
                else:
                     new_text.append(w)
-              return " ".join(new_text)```
+              return " ".join(new_text)
+
+   6. removing emojis: we can remove emoji or replace it with actual meaning of it.
+       ``` import re
+           def remove_emoji(text):
+           emoji_pattern = re.compile("["u"\U0001f600-\U0001F64F""]+", flags=re.UNICODE)
+           return emoji_pattern.sub(r'', text)   
+        # or to replace with meaning
+        import emoji
+        print(emoji.demojize('Python is ')) 
         
-        
-  
+  7. Tokenization: it can be word or sentence hence it gives a list in return. challenges in tokenization are. prefix: characters at the begining ex-$20 ,sufix: 20km,unfix : character in between ex-he/her, exception : special -case rule to split a string into several tokens or prevent a token from being split when punctauation rule are applied ex-let's, U.S
+  8. 
+  9. 
