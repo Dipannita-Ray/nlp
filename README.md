@@ -93,5 +93,14 @@ in neuropsychology ,linguistics and the philosophy of language ,a natural or ord
         print(emoji.demojize('Python is ')) 
         
   7. Tokenization: it can be word or sentence hence it gives a list in return. challenges in tokenization are. prefix: characters at the begining ex-$20 ,sufix: 20km,unfix : character in between ex-he/her, exception : special -case rule to split a string into several tokens or prevent a token from being split when punctauation rule are applied ex-let's, U.S
-  8. 
-  9. 
+  8. stemming  : used in informTION retrival sysytem.NLTK loibrarry is used.algo that can be used are Porter Stemmer(for english) and snowball stemmer
+  9. lemmetization: Unlike stemming ,reduces the inflected words properly ensuring that the root word belongs to the language .here root word is called lemma. word net is an english dictionary.while lemmetizing we also have to include the part of speech. 
+  10.
+ # feature Extraction:
+ chnaging text to numbers. there is a need of feature extraction is due to importance of feature. 
+ 1. one hot encodung: problem: sementic meaning is lost,sparsity,no fixed size ,  
+ 2. bag of words: used in text claasification technique, here we create a vocabulary , order of the words doesnt matter , count vectorizee is used
+ 3. ngrams
+ 4. Tfidf
+ 5. custom feactures
+ 6. word2vec
