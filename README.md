@@ -1,4 +1,6 @@
 # nlp
+![710888b3ebc3889dad7850790ffa5393](https://github.com/Dipannita-Ray/nlp/assets/155419369/0c189231-999a-4a25-bf95-d6b436905cb6)
+
 Natural Language processing is a subfield of linguistrics,computer science and the artificial intelligence concerned with the interactions betwwen computers and human language ,in particular how to program computers to process and analyze large amounts of natural language data.  
 # Need for NLP:
 in neuropsychology ,linguistics and the philosophy of language ,a natural or ordinary langyage is any langyage that has evolved naturally in humans through use and repetition without conscious planning or premeditation. Natural languages can take different forms ,such as speech or signing .they are distinguished from constructed and formal languages such as those used to program computers or to study logic  
