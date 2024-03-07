@@ -104,3 +104,39 @@ in neuropsychology ,linguistics and the philosophy of language ,a natural or ord
  4. Tfidf
  5. custom feactures
  6. word2vec
+# Advance Features:
+Let us take an sentence: virat kohli is my favourite cricketer.here token are all the words, whereas  stopwords are the sementic words like is my which have no meaning but are used for sentence formation, words are the words that doesnt have stopwords
+1. Token features:
+     - cwc_min: ratio of number of common words to the length of the smaller  question.formula: common words/min(words(q1,q2))
+     - cwc_max: ratio of number of common words to the length of the larger ques.
+     - csc_min: ratio of no.of stopwords to the smaller stopwords count among the two ques.common stopwords/min(stopwords(q1,q2))
+     - csc_max: ratio of no.of common stopwords to the larger stopwords count among the two ques.
+     - ctc_min: ratio of no.of common tokens to the smaller token count among the two questions. common tokens/min(tokens(q1,q2))
+     - ctc_max: this the ratio of no. of common tokens to the larger token count among the two ques
+     - last_word_eg: 1 if the last word in the ques is same , 0 otherwise. 
+     - first_word_eg: 1 if the first word in the two question is same ,0 otherwise.
+   
+2. length based features:
+     - mean_len: mean of the length of the question(no.of words). (q1 +q2)/2
+     - abs_len_diff: Absolute difference the length of the two ques(no.of words).(q1-q2) 
+     - longest_substr_ratio: ratio of the length of the longest substring among the two questions to the length of the smaller ques. 
+3. Fuzzy features:
+   FuzzyWuzzy is a python package that can be used for string matching. We can run the following command to install the package –
+   ``` pip install fuzzywuzzy ```
+   
+   - fuzz_ratio: fuzz_ratio score from fuzzywuzzy. ``` from fuzzywuzzy import fuzz
+Str1 = "Back"
+Str2 = "Book"
+Ratio = fuzz.ratio(Str1.lower(),Str2.lower())
+print(Ratio)``` hence the output is 50.here order of the words also matters 
+   - fuzz_partial_ratio: token_sort_ratio from fuzzywuzzy.The partial ratio helps us to perform substring matching. This takes the shortest string and compares it with all the substrings of the same length.
+       ```Str1 = "My name is Ali"
+        Str2 = "My name is Ali Abdaal"
+        print(fuzz.partial_ratio(Str1.lower(),Str2.lower())) ```
+   The output of the code gives 100 as partial_ratio() just checks if either string is a substring of the other.
+   - token_set_ratio: toekn_set_ratio from fuzzywuzzy.Token set ratio performs a set operation that takes out the common tokens instead of just tokenizing the strings, sorting, and then pasting the tokens back together. Extra or same repeated words do not matter.
+        ``` Str1 = "My name is Ali"
+            Str2 = "Ali is my name name"
+            print(fuzz.token_sort_ratio(Str1,Str2))
+            print(fuzz.token_set_ratio(Str1,Str2))```
+   The output of the token sort ratio comes to be 85 while that of the token set ratio comes to be 100 as the token set ratio doesn’t take into account the repeated words.   
