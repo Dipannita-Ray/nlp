@@ -124,11 +124,13 @@ Let us take an sentence: virat kohli is my favourite cricketer.here token are al
    FuzzyWuzzy is a python package that can be used for string matching. We can run the following command to install the package –
    ``` pip install fuzzywuzzy ```
    
-   - fuzz_ratio: fuzz_ratio score from fuzzywuzzy. ``` from fuzzywuzzy import fuzz
-Str1 = "Back"
-Str2 = "Book"
-Ratio = fuzz.ratio(Str1.lower(),Str2.lower())
-print(Ratio)``` hence the output is 50.here order of the words also matters 
+   - fuzz_ratio: fuzz_ratio score from fuzzywuzzy.
+       ``` from fuzzywuzzy import fuzz
+           Str1 = "Back"
+           Str2 = "Book"
+           Ratio = fuzz.ratio(Str1.lower(),Str2.lower())
+           print(Ratio)```
+    hence the output is 50.here order of the words also matters 
    - fuzz_partial_ratio: token_sort_ratio from fuzzywuzzy.The partial ratio helps us to perform substring matching. This takes the shortest string and compares it with all the substrings of the same length.
        ```Str1 = "My name is Ali"
         Str2 = "My name is Ali Abdaal"
